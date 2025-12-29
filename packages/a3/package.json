@@ -1,0 +1,22 @@
+{
+  "name": "@vyberology/a3",
+  "version": "0.1.0",
+  "description": "A3 Primary Codegen - Deterministic code generation pipeline",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:smoke": "jest --testPathPattern=smoke"
+  },
+  "keywords": ["vyberology", "codegen", "lumen"],
+  "author": "A3 Owner (B-01)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  }
+}
