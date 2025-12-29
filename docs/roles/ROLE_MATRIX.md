@@ -21,13 +21,13 @@ This matrix defines all critical roles for the Vyberology 2.0 governance framewo
 
 | Code | Role | Category | Status | Assignee | Backup |
 |------|------|----------|--------|----------|--------|
-| B-01 | A3 Owner (Primary Codegen) | Owner | 🔲 Unassigned | TBD | TBD |
-| B-02 | A4 Owner (Dual Codegen) | Owner | 🔲 Unassigned | TBD | TBD |
-| B-03 | A5 Owner (Adjudicator) | Owner | 🔲 Unassigned | TBD | TBD |
-| B-04 | A7 Evidence Lead | Owner | 🔲 Unassigned | TBD | TBD |
-| B-05 | CI / compute_f_total Owner | Owner | 🔲 Unassigned | TBD | TBD |
-| B-06 | Thunder Strike Squad | Validator | 🔲 Unassigned | TBD | TBD |
-| B-07 | Diamond Hands Authority | Authority | 🔲 Unassigned | TBD | - |
+| B-01 | A3 Owner (Primary Codegen) | Owner | ✅ ACTIVE | Limn Prime | - |
+| B-02 | A4 Owner (Dual Codegen) | Owner | ✅ ACTIVE | Limn Prime | - |
+| B-03 | A5 Owner (Adjudicator) | Owner | ✅ ACTIVE | Limn Prime | - |
+| B-04 | A7 Evidence Lead | Owner | ✅ ACTIVE | Limn Prime | - |
+| B-05 | CI / compute_f_total Owner | Owner | ✅ ACTIVE | Limn Prime | - |
+| B-06 | Thunder Strike Squad | Validator | ✅ ACTIVE | Limn Prime (T1, T2) | - |
+| B-07 | Diamond Hands Authority | Authority | ✅ ACTIVE | Limn Prime | - |
 
 ---
 
