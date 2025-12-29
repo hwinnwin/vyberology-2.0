@@ -1,0 +1,155 @@
+# Vyberology 2.0 Canonical Manifest
+# Copy to manifest.yaml and customize for your deployment
+
+version: "2.0.0"
+
+# Project Metadata
+project:
+  name: "LUMEN OS"
+  description: "Governance + Validation System"
+  repository: "github.com/your-org/vyberology-2.0"
+
+# Frequency Band Thresholds
+# F_total is classified into bands for operational status
+thresholds:
+  critical: 0.3    # F < 0.3: System unstable, halt all operations
+  low: 0.5         # 0.3 <= F < 0.5: Needs immediate attention
+  nominal: 0.7     # 0.5 <= F < 0.7: Operating normally
+  optimal: 0.9     # 0.7 <= F < 0.9: High performance mode
+
+# Component Weights for F_total Calculation
+# Must sum to 1.0
+weights:
+  A3_governance: 0.30       # Governance documentation & policy
+  A4_architecture: 0.25     # System architecture alignment
+  A5_implementation: 0.25   # Code implementation quality
+  validation: 0.20          # Validation pass multiplier
+
+# Diamond Hands Authority Configuration
+diamond_hands:
+  threshold: 0.7            # Minimum F_total for advancement
+  required_validation_score: 0.8
+  approval_required: true
+  approvers:
+    - "diamond-hands-lead"
+    - "governance-council"
+
+# Thunder Strike Validator Squad Configuration
+thunder_strike:
+  validation_levels:
+    - self_assessment
+    - peer_review
+    - external_validation
+    - diamond_hands_final
+
+  required_for_advancement:
+    - self_assessment
+    - peer_review
+    - external_validation
+
+# Metric Collection Configuration
+metrics:
+  coherence:
+    description: "Internal consistency of component"
+    weight: 0.25
+    sources:
+      - code_quality_score
+      - documentation_alignment
+      - test_coverage
+
+  alignment:
+    description: "Alignment with governance policies"
+    weight: 0.25
+    sources:
+      - policy_compliance_check
+      - architectural_review
+      - security_audit
+
+  velocity:
+    description: "Progress and delivery rate"
+    weight: 0.15
+    sources:
+      - sprint_completion
+      - milestone_tracking
+      - blockers_resolved
+
+  stability:
+    description: "System reliability and uptime"
+    weight: 0.20
+    sources:
+      - error_rate
+      - incident_count
+      - recovery_time
+
+  evidence_score:
+    description: "Documentation and proof completeness"
+    weight: 0.15
+    sources:
+      - a7_bundle_completeness
+      - audit_trail
+      - decision_logs
+
+# Evidence Bundle (A7) Configuration
+evidence:
+  output_directory: "evidence/A7-bundle"
+  formats:
+    - json
+    - yaml
+    - markdown
+  retention_days: 90
+  required_artifacts:
+    - frequency_report
+    - validation_logs
+    - component_metrics
+    - decision_record
+
+# CI/CD Pipeline Configuration
+ci:
+  trigger_on:
+    - push
+    - pull_request
+    - schedule
+
+  schedule: "0 */6 * * *"  # Every 6 hours
+
+  jobs:
+    compute_frequency:
+      runs_on: ubuntu-latest
+      timeout_minutes: 10
+
+    validate_evidence:
+      runs_on: ubuntu-latest
+      needs: compute_frequency
+
+    notify_stakeholders:
+      runs_on: ubuntu-latest
+      needs: validate_evidence
+      condition: "f_total < thresholds.nominal"
+
+# Notification Configuration
+notifications:
+  channels:
+    - type: slack
+      webhook_env: "SLACK_WEBHOOK_URL"
+      events:
+        - band_change
+        - validation_failed
+        - diamond_hands_ready
+
+    - type: email
+      recipients_env: "NOTIFY_EMAILS"
+      events:
+        - critical_frequency
+        - poc_advancement
+
+# Role Assignments (Update with actual assignees)
+roles:
+  A3_owner: "TBD"           # B-01: Governance Lead
+  A4_owner: "TBD"           # B-02: Architecture Lead
+  A5_owner: "TBD"           # B-03: Implementation Lead
+  A7_evidence_lead: "TBD"   # B-04: Validation Lead
+  ci_owner: "TBD"           # B-05: CI/CD Owner
+  thunder_strike_squad:     # B-06: Validator Squad
+    - "TBD"
+  diamond_hands_authority:  # B-07: Decision Authority
+    - "TBD"

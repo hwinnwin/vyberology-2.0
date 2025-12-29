@@ -1,0 +1,47 @@
+band: optimal
+components:
+- frequency: 0.849
+  metrics:
+    alignment: 0.9
+    coherence: 0.85
+    evidence_score: 0.82
+    name: A3-Governance
+    stability: 0.88
+    velocity: 0.75
+  name: A3-Governance
+- frequency: 0.785
+  metrics:
+    alignment: 0.85
+    coherence: 0.78
+    evidence_score: 0.75
+    name: A4-Architecture
+    stability: 0.8
+    velocity: 0.7
+  name: A4-Architecture
+- frequency: 0.7625
+  metrics:
+    alignment: 0.8
+    coherence: 0.72
+    evidence_score: 0.7
+    name: A5-Implementation
+    stability: 0.75
+    velocity: 0.85
+  name: A5-Implementation
+f_total: 0.7988
+ready_for_diamond_hands: true
+recommendation: 'ADVANCE: Ready for Diamond Hands review.'
+timestamp: '2025-12-29T21:11:12.479482+00:00'
+validations:
+- level: self_assessment
+  notes: Self-assessment complete
+  passed: true
+  score: 0.85
+  timestamp: '2025-12-29T21:11:12.479278+00:00'
+  validator_id: self-check-001
+- level: peer_review
+  notes: Peer review passed
+  passed: true
+  score: 0.8
+  timestamp: '2025-12-29T21:11:12.479479+00:00'
+  validator_id: thunder-strike-alpha
+version: 2.0.0

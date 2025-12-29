@@ -1,0 +1,112 @@
+name: Validation Request (Thunder Strike)
+description: Request validation from Thunder Strike squad
+title: "[VALIDATE] "
+labels: ["validation", "thunder-strike"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thunder Strike Validation Request
+        Use this template to request multi-level validation for POC advancement.
+
+  - type: dropdown
+    id: validation-level
+    attributes:
+      label: Validation Level Requested
+      description: Which validation level is this request for?
+      options:
+        - Self-Assessment (Level 1)
+        - Peer Review (Level 2)
+        - External Validation (Level 3)
+        - Diamond Hands Final (Level 4)
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Validation Scope
+      description: What components/artifacts need validation?
+      placeholder: |
+        Components:
+        - A3-Governance: policy-001
+        - A4-Architecture: design-spec-v2
+
+        Artifacts:
+        - Evidence bundle: 2024-01-15
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence-location
+    attributes:
+      label: Evidence Location
+      description: Where can validators find the evidence?
+      placeholder: |
+        - evidence/A7-bundle/2024-01-15/
+        - docs/decisions/ADR-001.md
+    validations:
+      required: true
+
+  - type: input
+    id: current-f-total
+    attributes:
+      label: Current F_total
+      description: Latest frequency score (run compute_f_total.py --demo)
+      placeholder: "0.78"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: current-band
+    attributes:
+      label: Current Frequency Band
+      options:
+        - CRITICAL (< 0.3)
+        - LOW (0.3 - 0.5)
+        - NOMINAL (0.5 - 0.7)
+        - OPTIMAL (0.7 - 0.9)
+        - PEAK (>= 0.9)
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation-checklist
+    attributes:
+      label: Validation Checklist
+      description: Pre-flight checklist before validation
+      value: |
+        ### Pre-Validation Checklist
+        - [ ] All related tasks completed
+        - [ ] Evidence bundle generated
+        - [ ] compute_f_total.py executed successfully
+        - [ ] No critical issues outstanding
+        - [ ] Stakeholders notified
+
+  - type: textarea
+    id: known-risks
+    attributes:
+      label: Known Risks / Concerns
+      description: Any known issues validators should be aware of?
+      placeholder: |
+        - Risk 1: description
+        - Mitigation: approach
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      options:
+        - Standard (5 business days)
+        - Priority (2 business days)
+        - Urgent (24 hours)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information validators should know?

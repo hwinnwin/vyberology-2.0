@@ -1,0 +1,103 @@
+name: Implementation Task (A5)
+description: Create an implementation task for Vyberology 2.0
+title: "[A5] "
+labels: ["implementation", "A5"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Implementation Task Template
+        Use this template for A5 implementation work items.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of implementation task is this?
+      options:
+        - Feature Development
+        - Bug Fix
+        - Refactoring
+        - Testing
+        - Documentation
+        - CI/CD Pipeline
+        - Infrastructure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Task priority level
+      options:
+        - Critical (Blocking POC)
+        - High (Sprint Priority)
+        - Medium (Backlog)
+        - Low (Nice to Have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detailed description of the implementation task
+      placeholder: Describe what needs to be implemented...
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Details
+      description: Technical specifications and requirements
+      placeholder: |
+        Files to modify:
+        New files to create:
+        Dependencies:
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this task to be complete?
+      placeholder: |
+        - [ ] Code implemented
+        - [ ] Tests passing
+        - [ ] Code reviewed
+        - [ ] Documentation updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing-requirements
+    attributes:
+      label: Testing Requirements
+      description: How should this be tested?
+      placeholder: |
+        - Unit tests:
+        - Integration tests:
+        - Manual testing:
+
+  - type: input
+    id: architecture-reference
+    attributes:
+      label: Architecture Reference
+      description: Link to related A4 architecture document
+      placeholder: "#123 or docs/architecture/component.md"
+
+  - type: dropdown
+    id: frequency-impact
+    attributes:
+      label: Expected Frequency Impact
+      description: How will this affect F_total?
+      options:
+        - Positive (Improves metrics)
+        - Neutral (No change)
+        - Negative (Temporary regression)
+        - Unknown
+    validations:
+      required: true

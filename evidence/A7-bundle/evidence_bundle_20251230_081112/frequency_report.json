@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-12-29T21:11:12.479482+00:00",
+  "version": "2.0.0",
+  "f_total": 0.7988,
+  "band": "optimal",
+  "components": [
+    {
+      "name": "A3-Governance",
+      "frequency": 0.849,
+      "metrics": {
+        "name": "A3-Governance",
+        "coherence": 0.85,
+        "alignment": 0.9,
+        "velocity": 0.75,
+        "stability": 0.88,
+        "evidence_score": 0.82
+      }
+    },
+    {
+      "name": "A4-Architecture",
+      "frequency": 0.785,
+      "metrics": {
+        "name": "A4-Architecture",
+        "coherence": 0.78,
+        "alignment": 0.85,
+        "velocity": 0.7,
+        "stability": 0.8,
+        "evidence_score": 0.75
+      }
+    },
+    {
+      "name": "A5-Implementation",
+      "frequency": 0.7625,
+      "metrics": {
+        "name": "A5-Implementation",
+        "coherence": 0.72,
+        "alignment": 0.8,
+        "velocity": 0.85,
+        "stability": 0.75,
+        "evidence_score": 0.7
+      }
+    }
+  ],
+  "validations": [
+    {
+      "level": "self_assessment",
+      "validator_id": "self-check-001",
+      "timestamp": "2025-12-29T21:11:12.479278+00:00",
+      "passed": true,
+      "score": 0.85,
+      "notes": "Self-assessment complete"
+    },
+    {
+      "level": "peer_review",
+      "validator_id": "thunder-strike-alpha",
+      "timestamp": "2025-12-29T21:11:12.479479+00:00",
+      "passed": true,
+      "score": 0.8,
+      "notes": "Peer review passed"
+    }
+  ],
+  "ready_for_diamond_hands": true,
+  "recommendation": "ADVANCE: Ready for Diamond Hands review."
+}

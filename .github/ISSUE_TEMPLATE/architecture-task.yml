@@ -1,0 +1,99 @@
+name: Architecture Task (A4)
+description: Create an architecture-related task for Vyberology 2.0
+title: "[A4] "
+labels: ["architecture", "A4"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Architecture Task Template
+        Use this template for A4 architecture-related work items.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of architecture task is this?
+      options:
+        - System Design
+        - Component Design
+        - Integration Design
+        - Technical Specification
+        - Architecture Decision Record (ADR)
+        - Performance Analysis
+        - Security Architecture
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Task priority level
+      options:
+        - Critical (Blocking POC)
+        - High (Sprint Priority)
+        - Medium (Backlog)
+        - Low (Nice to Have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detailed description of the architecture task
+      placeholder: Describe the architectural work needed...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Background
+      description: Why is this architecture change needed?
+      placeholder: |
+        Current state:
+        Problem:
+        Proposed solution:
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this task to be complete?
+      placeholder: |
+        - [ ] Design documented
+        - [ ] ADR created (if applicable)
+        - [ ] Stakeholder review complete
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What does this depend on? What depends on this?
+      placeholder: |
+        Blocked by:
+        Blocks:
+
+  - type: input
+    id: affected-components
+    attributes:
+      label: Affected Components
+      description: Which system components are affected?
+      placeholder: "API Gateway, Auth Service, Database"
+
+  - type: dropdown
+    id: thunder-strike-review
+    attributes:
+      label: Thunder Strike Review Required?
+      options:
+        - "Yes - Full Review"
+        - "Yes - Lightweight Review"
+        - "No"
+    validations:
+      required: true

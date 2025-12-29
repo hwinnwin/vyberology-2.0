@@ -1,0 +1,89 @@
+name: Governance Task (A3)
+description: Create a governance-related task for Vyberology 2.0
+title: "[A3] "
+labels: ["governance", "A3"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Governance Task Template
+        Use this template for A3 governance-related work items.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of governance task is this?
+      options:
+        - Policy Definition
+        - Policy Update
+        - Role Assignment
+        - Decision Record
+        - Compliance Review
+        - Documentation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Task priority level
+      options:
+        - Critical (Blocking POC)
+        - High (Sprint Priority)
+        - Medium (Backlog)
+        - Low (Nice to Have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detailed description of the governance task
+      placeholder: Describe what needs to be done...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this task to be complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Evidence documented
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence-requirements
+    attributes:
+      label: Evidence Requirements
+      description: What evidence must be captured for A7 bundle?
+      placeholder: |
+        - Decision log entry
+        - Stakeholder sign-off
+        - Policy document update
+
+  - type: input
+    id: related-components
+    attributes:
+      label: Related Components
+      description: Which components does this affect?
+      placeholder: "A4-Architecture, A5-Implementation"
+
+  - type: dropdown
+    id: diamond-hands-required
+    attributes:
+      label: Diamond Hands Approval Required?
+      options:
+        - "Yes"
+        - "No"
+        - "TBD"
+    validations:
+      required: true
