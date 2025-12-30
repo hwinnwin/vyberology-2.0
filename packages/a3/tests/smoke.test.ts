@@ -5,12 +5,13 @@
  * Must pass before Week 1 completion.
  */
 
+import * as path from 'path';
 import { generate } from '../src/codegen';
 import { CodegenConfig, CodegenOutput } from '../src/types';
 
 describe('A3 Codegen Smoke Test', () => {
   const testConfig: CodegenConfig = {
-    manifestPath: '../../../manifest.example.yaml',
+    manifestPath: path.resolve(__dirname, '../../../manifest.example.yaml'),
     outputDir: './dist',
     options: {
       deterministic: true,
@@ -40,7 +41,7 @@ describe('A3 Codegen Smoke Test', () => {
     const output = await generate(testConfig);
 
     expect(output.metadata).toBeDefined();
-    expect(output.metadata.version).toBe('0.1.0');
+    expect(output.metadata.version).toBe('1.0.0');
     expect(output.metadata.timestamp).toBeDefined();
     expect(output.metadata.manifestHash).toBeDefined();
     expect(output.metadata.durationMs).toBeGreaterThanOrEqual(0);

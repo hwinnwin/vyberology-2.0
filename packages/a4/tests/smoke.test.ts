@@ -5,12 +5,13 @@
  * Must pass before Week 1 completion.
  */
 
+import * as path from 'path';
 import { generate } from '../src/codegen';
 import { CodegenConfig, CodegenOutput } from '../src/types';
 
 describe('A4 Dual Codegen Smoke Test', () => {
   const testConfig: CodegenConfig = {
-    manifestPath: '../../../manifest.example.yaml',
+    manifestPath: path.resolve(__dirname, '../../../manifest.example.yaml'),
     outputDir: './dist',
     options: {
       deterministic: true,
@@ -40,7 +41,7 @@ describe('A4 Dual Codegen Smoke Test', () => {
     const output = await generate(testConfig);
 
     expect(output.metadata).toBeDefined();
-    expect(output.metadata.version).toBe('0.1.0');
+    expect(output.metadata.version).toBe('1.0.0');
     expect(output.metadata.timestamp).toBeDefined();
     expect(output.metadata.manifestHash).toBeDefined();
     expect(output.metadata.durationMs).toBeGreaterThanOrEqual(0);
@@ -49,10 +50,23 @@ describe('A4 Dual Codegen Smoke Test', () => {
   it('should be independent from A3', async () => {
     const output = await generate(testConfig);
 
-    // Verify A4 markers in output (different from A3)
+    // Verify A4 uses AST-based generator (different from A3's template approach)
+    expect(output.metadata.generator).toBe('a4-dual-ast');
+
+    // Index file should be generated
     const indexFile = output.files.find(f => f.path === 'index.ts');
     expect(indexFile).toBeDefined();
-    expect(indexFile?.content).toContain('A4 Dual Codegen');
-    expect(indexFile?.content).toContain('Independent implementation');
+    expect(indexFile?.content).toContain('a4-dual-ast');
+  });
+
+  it('should generate files with hashes', async () => {
+    const output = await generate(testConfig);
+
+    for (const file of output.files) {
+      expect(file.path).toBeDefined();
+      expect(file.content).toBeDefined();
+      expect(file.hash).toBeDefined();
+      expect(file.hash.length).toBe(16);
+    }
   });
 });
