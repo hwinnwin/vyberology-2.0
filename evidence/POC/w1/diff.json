@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "generator": "a5-adjudicator",
+  "timestamp": "2025-12-30T04:08:28.936Z",
+  "a3Hash": "f5404c777fea6c6d",
+  "a4Hash": "99a42f10a7a754e7",
+  "totalDiffs": 10,
+  "mismatches": [
+    {
+      "type": "HASH_MISMATCH",
+      "severity": "major",
+      "path": "types.ts",
+      "description": "File hashes differ",
+      "a3Value": "b02dde7c71e7acf4",
+      "a4Value": "de90a0d252a007cd"
+    },
+    {
+      "type": "CONTENT_DIFF",
+      "severity": "minor",
+      "path": "types.ts",
+      "description": "Line count differs",
+      "a3Value": "91 lines",
+      "a4Value": "60 lines"
+    },
+    {
+      "type": "HASH_MISMATCH",
+      "severity": "major",
+      "path": "constants.ts",
+      "description": "File hashes differ",
+      "a3Value": "af6398158ff768ba",
+      "a4Value": "2840bcc7931d39af"
+    },
+    {
+      "type": "CONTENT_DIFF",
+      "severity": "minor",
+      "path": "constants.ts",
+      "description": "Line count differs",
+      "a3Value": "106 lines",
+      "a4Value": "140 lines"
+    },
+    {
+      "type": "HASH_MISMATCH",
+      "severity": "major",
+      "path": "validators.ts",
+      "description": "File hashes differ",
+      "a3Value": "387eba43000f0e78",
+      "a4Value": "279959e7c5bba9aa"
+    },
+    {
+      "type": "CONTENT_DIFF",
+      "severity": "minor",
+      "path": "validators.ts",
+      "description": "Line count differs",
+      "a3Value": "144 lines",
+      "a4Value": "94 lines"
+    },
+    {
+      "type": "HASH_MISMATCH",
+      "severity": "major",
+      "path": "config.ts",
+      "description": "File hashes differ",
+      "a3Value": "2907a0eb537dc3aa",
+      "a4Value": "275c941f45a49b3f"
+    },
+    {
+      "type": "HASH_MISMATCH",
+      "severity": "major",
+      "path": "index.ts",
+      "description": "File hashes differ",
+      "a3Value": "5d9a71eff63dbf55",
+      "a4Value": "51e42f06250364a8"
+    },
+    {
+      "type": "CONTENT_DIFF",
+      "severity": "info",
+      "path": "metadata.generator",
+      "description": "Generators differ (expected)",
+      "a3Value": "a3-primary",
+      "a4Value": "a4-dual-ast"
+    },
+    {
+      "type": "HASH_MISMATCH",
+      "severity": "major",
+      "path": "metadata.manifestHash",
+      "description": "Manifest hashes differ - inputs may be different",
+      "a3Value": "ef109bd372616d7a",
+      "a4Value": "a648130eabf3aa1c"
+    }
+  ],
+  "summary": {
+    "filesMatch": true,
+    "hashMatch": false,
+    "criticalCount": 0,
+    "majorCount": 6,
+    "minorCount": 3,
+    "infoCount": 1
+  },
+  "verdict": "PARTIAL_MATCH"
+}

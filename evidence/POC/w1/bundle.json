@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "timestamp": "2025-12-30T04:08:28.936Z",
+  "week": 1,
+  "generator": "vyberology-evidence-generator",
+  "manifest": {
+    "path": "/Users/mrtungsten/Documents/vyberology-2.0/manifest.example.yaml",
+    "hash": "ef109bd372616d7a"
+  },
+  "a3": {
+    "hash": "f5404c777fea6c6d",
+    "fileCount": 5,
+    "generator": "a3-primary",
+    "durationMs": 2
+  },
+  "a4": {
+    "hash": "99a42f10a7a754e7",
+    "fileCount": 5,
+    "generator": "a4-dual-ast",
+    "durationMs": 1
+  },
+  "adjudication": {
+    "verdict": "PARTIAL_MATCH",
+    "confidence": 0.8,
+    "semanticallyEquivalent": false,
+    "diffCount": 5
+  },
+  "artifacts": [
+    "a3-output.json",
+    "a4-output.json",
+    "diff.json",
+    "adjudication.json",
+    "bundle.json"
+  ]
+}

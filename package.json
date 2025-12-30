@@ -13,6 +13,11 @@
     "test:a3": "npm test --workspace=@vyberology/a3",
     "test:a4": "npm test --workspace=@vyberology/a4",
     "test:adjudicator": "npm test --workspace=@vyberology/adjudicator",
+    "test:behaviour": "npm test --workspace=@vyberology/adjudicator -- --testPathPattern=behaviour",
+    "a3:smoke": "npx ts-node scripts/smoke-a3.ts",
+    "a4:smoke": "npx ts-node scripts/smoke-a4.ts",
+    "a5:diff": "npx ts-node scripts/run-diff.ts",
+    "evidence:generate": "npx ts-node scripts/generate-evidence.ts",
     "compute:f-total": "python3 scripts/compute_f_total.py"
   },
   "keywords": [
@@ -29,6 +34,7 @@
     "@types/node": "^20.0.0",
     "jest": "^29.5.0",
     "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
     "typescript": "^5.0.0"
   }
 }
